@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/angular-kanban-app/",
     "site": "kanban-chl",
     "ignore": [
       "firebase.json",
