@@ -8,7 +8,7 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 $custom-typography: mat-typography-config(
-    $font-family: "Ubuntu, Roboto, monospace",
+    $font-family: "Ubuntu, monospace",
 );
 
 @include mat-core($custom-typography);
@@ -50,7 +50,7 @@ $custom-orange: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $angular-kanban-app-primary: mat-palette($custom-orange);
-$angular-kanban-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-kanban-app-accent: mat-palette($mat-green, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $angular-kanban-app-warn: mat-palette($mat-red);
@@ -75,5 +75,5 @@ body {
 }
 body {
     margin: 0;
-    font-family: Ubunut, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubunut, "Helvetica Neue", sans-serif;
 }
