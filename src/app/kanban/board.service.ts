@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth/auth';
-import { AngularFirestore } from '@angular/fire/firestore/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Board, Task } from './board.model';
 import * as firebase from 'firebase/app';
 import { switchMap } from 'rxjs/operators';
@@ -63,6 +63,7 @@ export class BoardService {
     return this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
+          console.log('User uid', user.uid);
           return this.db
             .collection<Board>('boards',
               ref => ref.where('uid', '==', user.uid).orderBy('priority'))
