@@ -63,7 +63,6 @@ export class BoardService {
     return this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
-          console.log('User uid', user.uid);
           return this.db
             .collection<Board>('boards',
               ref => ref.where('uid', '==', user.uid).orderBy('priority'))
